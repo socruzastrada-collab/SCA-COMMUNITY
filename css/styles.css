@@ -1,0 +1,181 @@
+/* =====================================
+   VARIABLES
+===================================== */
+:root {
+  --sca-bg: hsl(30, 35%, 88%);
+  --sca-primary: hsl(290, 52%, 53%);
+  --sca-dark: #111111;
+  --sca-text: #333333;
+  --sca-muted: #555555;
+
+  --radius: 16px;
+}
+
+/* =====================================
+   BASE
+===================================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--sca-text);
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================
+   NAVBAR (Bootstrap personalizado)
+===================================== */
+.navbar {
+  background-color: var(--sca-primary);
+  padding: 16px 0;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #111111;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar .nav-link.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Botón hamburguesa visible */
+.navbar-toggler {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* =====================================
+   BOTONES
+===================================== */
+.btn-primary {
+  --bs-btn-bg: #111111;
+  --bs-btn-border-color: #111111;
+  --bs-btn-hover-bg: #000000;
+  --bs-btn-hover-border-color: #000000;
+}
+
+/* =====================================
+   SECCIONES GENERALES
+===================================== */
+.section {
+  padding: 60px 0;
+}
+
+.section--alt {
+  background-color: var(--sca-bg);
+}
+
+.section__title {
+  font-size: clamp(28px, 3vw, 40px);
+  margin-bottom: 16px;
+}
+
+/* =====================================
+   HERO (HOME)
+===================================== */
+.hero {
+  background-color: var(--sca-bg);
+  padding: 80px 0;
+}
+
+.hero__title {
+  font-size: clamp(30px, 3vw, 44px);
+  margin-bottom: 16px;
+  color: #222222;
+}
+
+.hero__text {
+  color: var(--sca-muted);
+  margin-bottom: 14px;
+}
+
+.hero__card {
+  background-color: #ffffff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* =====================================
+   CARDS (Servicios + Portfolio)
+===================================== */
+.service-card {
+  border-radius: var(--radius);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Links utilitarios */
+.link-arrow {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--sca-dark);
+}
+
+.link-arrow:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   FORMULARIO
+===================================== */
+form.card {
+  border-radius: var(--radius);
+}
+
+.form-control:focus {
+  border-color: var(--sca-primary);
+  box-shadow: 0 0 0 0.2rem rgba(182, 94, 214, 0.25);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+.site-footer {
+  background-color: var(--sca-bg);
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.site-footer p,
+.site-footer li {
+  color: var(--sca-muted);
+}
+
+.site-footer hr {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+}
