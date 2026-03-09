@@ -1,94 +1,348 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>SCA.Community | Sobre mí</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Reset -->
-  <link rel="stylesheet" href="../css/reset.css">
+  <meta
+    name="description"
+    content="Portfolio de SCA.Community con proyectos de gestión de redes sociales, estrategia digital y creación de contenido para distintas marcas."
+  />
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="../css/styles.css">
+  <title>SCA.Community | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- CSS compilado desde SCSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
+
 <body>
 
-    <!--
-    PreEntrega 1 – Desarrollo Web
-    Portfolio profesional – SCA.Community
-    Alumna: Sofía Cruz Astrada
-    -->
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
 
-    <header>
-        <div class="logo">
-            <h2>SCA.Community</h2>
-        </div>
+      <a class="navbar-brand fw-semibold" href="../index.html">
+        SCA.Community
+      </a>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre mí</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Abrir menú"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <main>
-        <section class="pagina">
-            <h1>Portfolio</h1>
+      <div class="collapse navbar-collapse" id="mainNav">
+
+        <ul class="navbar-nav ms-auto gap-lg-2">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="servicios.html">Servicios</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="portfolio.html">Portfolio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+
+<!-- INTRO -->
+
+<section class="section">
+
+  <div class="container">
+
+    <p class="section__eyebrow mb-2">Portfolio</p>
+
+    <h1 class="section__title">
+      Proyectos y marcas con las que trabajé
+    </h1>
+
+    <p class="lead mb-0">
+      Selección de trabajos y ejemplos de contenido pensados según los objetivos,
+      la identidad visual de cada marca y las necesidades de su audiencia.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- GRID PROYECTOS -->
+
+<section class="section portfolio-preview">
+
+  <div class="container">
+
+    <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-4">
+
+      <div>
+
+        <p class="section__eyebrow mb-2">
+          Trabajos destacados
+        </p>
+
+        <h2 class="section__title mb-0">
+          Algunos proyectos de SCA.Community
+        </h2>
+
+      </div>
+
+      <a class="link-arrow" href="contacto.html">
+        Quiero trabajar con vos
+      </a>
+
+    </div>
+
+
+    <div class="row g-4 portfolio-grid">
+
+
+      <!-- PROYECTO 1 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <article class="card h-100 portfolio-card">
+
+          <img
+            src="../img/perfil-sca.jpg"
+            class="card-img-top"
+            alt="Perfil de Instagram de SCA.Community mostrando contenido educativo y estratégico"
+          />
+
+          <div class="card-body">
+
+            <h3 class="h5">@sca.community</h3>
+
             <p>
-                Selección de trabajos y ejemplos de contenido. Cada proyecto fue pensado según los objetivos,
-                la identidad de la marca y su público.
+              <strong>Objetivo:</strong>
+              aumentar alcance e interacción con contenido educativo,
+              cercano y alineado a una marca personal profesional.
             </p>
-        </section>
 
-        <section class="portfolio">
-            <article class="caso">
-                <h2>@SCA.Community</h2>
-                <p><strong>Objetivo:</strong> aumentar alcance e interacción con contenido educativo y cercano.</p>
-                <p><strong>Acciones:</strong> calendario de contenido, reels, historias interactivas y copies orientados a conversión.</p>
-                <img src="../img/perfil-sca.jpg" alt="Ejemplo perfil de SCA.Community ">
-            </article>
+            <p class="mb-0">
+              <strong>Acciones:</strong>
+              calendario de contenido, reels, historias interactivas
+              y copies orientados a conversión.
+            </p>
 
-            <article class="caso">
-                <h2>@ombu.propiedades</h2>
-                <p><strong>Objetivo:</strong> comunicar propiedades de forma clara y profesional.</p>
-                <p><strong>Acciones:</strong> copies informativos, piezas para fechas especiales y organización del feed.</p>
-                <img src="../img/ombu-propiedades.jpg" alt="Ejemplo de página de Ombu Propiedades">
-            </article>
+          </div>
 
-            <article class="caso">
-                <h2>@tesis.shoes.indu</h2>
-                <p><strong>Objetivo:</strong> mostrar productos, generar comunidad y potenciar ventas.</p>
-                <p><strong>Acciones:</strong> ideas de reels, juegos de viernes, contenido de producto y storytelling.</p>
-                <img src="../img/tesi-shoes.jpg" alt="Ejemplo de página de Tesi.Shoes.indu">
-            </article>
-        </section>
-    </main>
+        </article>
 
-    <footer>
-        <div class="footer-info">
-            <h3>SCA.Community</h3>
+      </div>
+
+
+
+      <!-- PROYECTO 2 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <article class="card h-100 portfolio-card">
+
+          <img
+            src="../img/ombu-propiedades.jpg"
+            class="card-img-top"
+            alt="Feed de Ombú Propiedades con comunicación inmobiliaria profesional"
+          />
+
+          <div class="card-body">
+
+            <h3 class="h5">@ombu.propiedades</h3>
+
             <p>
-                Gestión y creación de contenido para marcas que buscan crecer
-                y comunicar de forma estratégica en redes sociales.
+              <strong>Objetivo:</strong>
+              comunicar propiedades y servicios de manera clara,
+              profesional y cercana.
             </p>
-        </div>
 
-        <div class="footer-contacto">
-            <h4>Contacto</h4>
-            <ul>
-                <li>Email: socruzastrada@gmail.com</li>
-                <li>Instagram: @sca.community</li>
-                <li>Buenos Aires, Argentina</li>
-            </ul>
-        </div>
+            <p class="mb-0">
+              <strong>Acciones:</strong>
+              copies informativos, piezas para fechas especiales,
+              organización del feed y contenido institucional.
+            </p>
 
-        <div class="footer-copy">
-            <p>© 2026 Sofía Cruz Astrada – Community Manager</p>
-        </div>
-    </footer>
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- PROYECTO 3 -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <article class="card h-100 portfolio-card">
+
+          <img
+            src="../img/tesi-shoes.jpg"
+            class="card-img-top"
+            alt="Perfil de Tesi Shoes mostrando productos y contenido de comunidad"
+          />
+
+          <div class="card-body">
+
+            <h3 class="h5">@tesis.shoes.indu</h3>
+
+            <p>
+              <strong>Objetivo:</strong>
+              mostrar productos, generar comunidad
+              y potenciar la presencia digital de la marca.
+            </p>
+
+            <p class="mb-0">
+              <strong>Acciones:</strong>
+              ideas de reels, juegos interactivos,
+              contenido de producto y storytelling visual.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="section cta-section">
+
+  <div class="container">
+
+    <div class="cta-box text-center">
+
+      <p class="section__eyebrow mb-2">
+        ¿Te gustaría ver tu marca acá?
+      </p>
+
+      <h2 class="section__title">
+        Trabajemos en una estrategia para tu proyecto
+      </h2>
+
+      <p class="mb-4">
+        Si buscás una presencia digital más clara,
+        profesional y alineada con tus objetivos,
+        escribime y armamos una propuesta pensada para tu marca.
+      </p>
+
+      <a class="btn btn-primary btn-lg" href="contacto.html">
+        Ir a contacto
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="row g-4 align-items-start">
+
+      <div class="col-12 col-lg-6">
+
+        <h3 class="h5 mb-2">SCA.Community</h3>
+
+        <p class="mb-0">
+          Gestión y creación de contenido para marcas que buscan crecer
+          y comunicar de manera estratégica en redes sociales.
+        </p>
+
+      </div>
+
+
+      <div class="col-12 col-lg-3">
+
+        <h4 class="h6 mb-2">Secciones</h4>
+
+        <ul class="list-unstyled mb-0">
+
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="col-12 col-lg-3">
+
+        <h4 class="h6 mb-2">Contacto</h4>
+
+        <ul class="list-unstyled mb-0">
+
+          <li>Email: socruzastrada@gmail.com</li>
+          <li>Instagram: @sca.community</li>
+          <li>Ubicación: Buenos Aires, Argentina</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <hr class="my-4" />
+
+    <p class="mb-0 small">
+      © 2026 Sofía Cruz Astrada – Community Manager
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,444 @@
+/* ==============================
+   VARIABLES
+============================== */
+
+$color-primary: hsl(290, 65%, 29%);
+$color-primary-light: hsl(290, 50%, 94%);
+$color-dark: #1f1f1f;
+$color-text: #444444;
+$color-border: #e8dff0;
+$color-white: #ffffff;
+$color-bg: #faf7fc;
+
+$radius-md: 12px;
+$radius-lg: 20px;
+
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 3rem;
+$spacing-xl: 5rem;
+
+$shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+/* ==============================
+   MIXINS
+============================== */
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-base {
+  padding: 0.75rem 1.5rem;
+  border-radius: $radius-md;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* ==============================
+   EXTENDS
+============================== */
+
+%card-base {
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background-color: $color-white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==============================
+   RESET
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   BASE
+============================== */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==============================
+   HEADER / NAVBAR
+============================== */
+
+.site-header {
+  background: $color-white;
+  border-bottom: 1px solid $color-border;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+
+  .navbar-brand {
+    color: $color-primary;
+    font-weight: 700;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .nav-link {
+    color: $color-dark;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &.active {
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+  padding: $spacing-xl 0;
+  background: linear-gradient(180deg, #faf7fc 0%, #f3e9fa 100%);
+
+  &__eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-primary;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    color: $color-primary;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+
+  &__actions {
+    margin-top: 1.5rem;
+  }
+
+  &__card {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $spacing-md;
+    box-shadow: $shadow-soft;
+  }
+
+  &__list {
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+/* ==============================
+   SECTIONS
+============================== */
+
+.section {
+  padding: 4rem 0;
+}
+
+.section__title {
+  color: $color-primary;
+  font-weight: 700;
+}
+
+.section__eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-primary;
+  font-weight: 700;
+}
+
+.link-arrow {
+  color: $color-primary;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+/* ==============================
+   SERVICES
+============================== */
+
+.services-section {
+  background-color: $color-bg;
+}
+
+.service-card {
+  @extend %card-base;
+  box-shadow: none;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-soft;
+  }
+
+  .card-body {
+    padding: $spacing-md;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+  }
+}
+
+/* ==============================
+   PORTFOLIO
+============================== */
+
+.portfolio-preview {
+  background-color: $color-white;
+}
+
+.portfolio-card {
+  @extend %card-base;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-soft;
+  }
+
+  img {
+    object-fit: cover;
+    height: 220px;
+    width: 100%;
+  }
+
+  .card-body {
+    padding: $spacing-md;
+  }
+}
+.about-hero {
+  background-color: $color-bg;
+}
+
+.about-highlight {
+  @extend %card-base;
+  padding: $spacing-md;
+  box-shadow: $shadow-soft;
+
+  ul {
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.about-card {
+  @extend %card-base;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-soft;
+  }
+
+  .card-body {
+    padding: $spacing-md;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+  }
+}
+/* ==============================
+   CTA
+============================== */
+
+.cta-section {
+  background-color: $color-bg;
+}
+
+.cta-box {
+  background: $color-primary-light;
+  padding: 3rem;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-soft;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+.site-footer {
+  background: $color-primary;
+  color: $color-white;
+  padding: 3rem 0;
+
+  a {
+    color: $color-white;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  hr {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.btn-primary {
+  @include button-base;
+  background: $color-primary;
+  border: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: $color-primary;
+  }
+}
+
+.btn-outline-primary {
+  @include button-base;
+  border: 1px solid $color-primary;
+  color: $color-primary;
+  background: transparent;
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
+  }
+}
+
+/* ==============================
+   EACH (CLASES DINÁMICAS)
+============================== */
+
+$redes: (
+  instagram: #e1306c,
+  linkedin: #0a66c2,
+  whatsapp: #25d366
+);
+
+@each $red, $color in $redes {
+  .btn-#{$red} {
+    background-color: $color;
+    color: $color-white;
+    padding: 0.75rem 1rem;
+    border-radius: $radius-md;
+    display: inline-block;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 3rem 0;
+
+    &__title {
+      font-size: 1.9rem;
+    }
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .cta-box {
+    padding: 2rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .hero {
+    &__title {
+      font-size: 1.7rem;
+    }
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+}
