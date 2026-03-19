@@ -3,26 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="SCA.Community - Portfolio profesional de Sofía Cruz Astrada, Community Manager especializada en estrategia, contenido y gestión de redes sociales."
+  />
   <title>SCA.Community | Inicio</title>
 
-  <!-- Bootstrap CSS (CDN) -->
+  <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
 
-  <!-- Reset + Estilos -->
-  <link rel="stylesheet" href="css/reset.css" />
+  <!-- CSS compilado desde SCSS -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <!--
-    PreEntrega 2 – Desarrollo Web
-    Portfolio profesional – SCA.Community
-    Alumna: Sofía Cruz Astrada
-  -->
-
   <header class="site-header">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -35,18 +32,28 @@
           data-bs-target="#mainNav"
           aria-controls="mainNav"
           aria-expanded="false"
-          aria-label="Abrir menú"
+          aria-label="Abrir menú de navegación"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto gap-lg-2">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/servicios.html">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contacto.html">Contacto</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -54,40 +61,49 @@
   </header>
 
   <main>
-    <!-- HERO / INTRO -->
+    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="row align-items-center g-4">
-          <div class="col-12 col-lg-8">
-            <h1 class="hero__title">Sofía Cruz Astrada – Community Manager</h1>
+          <div class="col-12 col-lg-7">
+            <div class="hero__content">
+              <p class="hero__eyebrow">Community Manager & estrategia digital</p>
 
-            <p class="hero__text">
-              Soy Community Manager especializada en la gestión y creación de contenido para marcas
-              que buscan construir una presencia digital clara, coherente y estratégica.
-              A través de SCA.Community acompaño a emprendedores y empresas en el desarrollo
-              de sus redes sociales, combinando creatividad, análisis y planificación
-              para generar resultados reales.
-            </p>
+              <h1 class="hero__title">
+                Sofía Cruz Astrada – Gestión de contenido y redes sociales para marcas con identidad
+              </h1>
 
-            <p class="hero__text">
-              Mi enfoque se basa en entender la identidad de cada marca, su público y sus objetivos,
-              para crear contenido alineado a su propósito y optimizado para cada plataforma.
-            </p>
+              <p class="hero__text">
+                Soy Community Manager y trabajo en la planificación, creación y gestión de contenido
+                para marcas que buscan comunicar de forma clara, profesional y estratégica.
+              </p>
 
-            <a class="btn btn-primary btn-lg" href="pages/servicios.html">
-              Conocé mis servicios
-            </a>
+              <p class="hero__text">
+                A través de SCA.Community acompaño a emprendimientos y empresas en el desarrollo de
+                su presencia digital, combinando creatividad, organización y análisis para generar
+                una comunicación coherente y alineada a sus objetivos.
+              </p>
+
+              <div class="hero__actions d-flex flex-wrap gap-3">
+                <a class="btn btn-primary btn-lg" href="pages/servicios.html">
+                  Conocé mis servicios
+                </a>
+                <a class="btn btn-outline-primary btn-lg" href="pages/portfolio.html">
+                  Ver portfolio
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="col-12 col-lg-4">
-            <!-- Si sumás una imagen en el futuro, acordate del alt obligatorio -->
-            <!-- <img src="img/hero.jpg" alt="Sofía Cruz Astrada trabajando en estrategia de redes sociales" class="img-fluid rounded-4 shadow-sm"> -->
+          <div class="col-12 col-lg-5">
             <div class="hero__card">
-              <h2 class="h5 mb-2">Enfoque de trabajo</h2>
-              <ul class="mb-0">
-                <li>Estrategia + creatividad</li>
-                <li>Organización de contenido</li>
-                <li>Métricas para mejorar</li>
+              <h2 class="h5 mb-3">Mi enfoque de trabajo</h2>
+              <ul class="hero__list mb-0">
+                <li>Estrategia de comunicación adaptada a cada marca</li>
+                <li>Planificación y organización del contenido mensual</li>
+                <li>Diseño de piezas visuales para redes sociales</li>
+                <li>Redacción de copies claros y alineados al tono de voz</li>
+                <li>Análisis de métricas para optimizar resultados</li>
               </ul>
             </div>
           </div>
@@ -95,26 +111,29 @@
       </div>
     </section>
 
-    <!-- SERVICIOS -->
-    <section class="section">
+    <!-- SERVICIOS DESTACADOS -->
+    <section class="section services-section">
       <div class="container">
         <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-4">
-          <h2 class="section__title mb-0">Servicios</h2>
-          <a class="link-arrow" href="pages/servicios.html">Ver detalle</a>
+          <div>
+            <p class="section__eyebrow mb-2">Servicios</p>
+            <h2 class="section__title mb-0">¿Cómo puedo ayudarte?</h2>
+          </div>
+          <a class="link-arrow" href="pages/servicios.html">Ver detalle completo</a>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 services-grid">
           <div class="col-12 col-md-6 col-lg-4">
             <article class="card h-100 service-card">
               <div class="card-body">
                 <h3 class="h5">Gestión de Redes Sociales</h3>
                 <p>
-                  Planificación, creación y publicación de contenido para redes sociales,
-                  alineado a los objetivos de la marca y a su identidad visual.
+                  Planificación, creación y publicación de contenido alineado a la identidad visual
+                  y a los objetivos de comunicación de cada marca.
                 </p>
                 <ul class="mb-0">
                   <li>Calendario de contenido</li>
-                  <li>Redacción de copies</li>
+                  <li>Copies para posteos e historias</li>
                   <li>Diseño de piezas gráficas</li>
                 </ul>
               </div>
@@ -126,13 +145,13 @@
               <div class="card-body">
                 <h3 class="h5">Estrategia Digital</h3>
                 <p>
-                  Análisis de la marca, su público y el mercado para definir una estrategia
-                  digital clara y coherente.
+                  Análisis de la marca, del público y de la comunicación actual para definir una
+                  estrategia clara, ordenada y coherente.
                 </p>
                 <ul class="mb-0">
-                  <li>Análisis de métricas</li>
+                  <li>Auditoría de perfil</li>
                   <li>Definición de objetivos</li>
-                  <li>Optimización de perfiles</li>
+                  <li>Optimización de presencia digital</li>
                 </ul>
               </div>
             </article>
@@ -143,12 +162,12 @@
               <div class="card-body">
                 <h3 class="h5">Asesorías Personalizadas</h3>
                 <p>
-                  Acompañamiento y asesoramiento para emprendedores que desean mejorar
-                  su presencia en redes sociales.
+                  Acompañamiento individual para emprendedores que quieren ordenar sus redes y
+                  mejorar su comunicación de forma práctica.
                 </p>
                 <ul class="mb-0">
-                  <li>Auditoría de redes</li>
-                  <li>Recomendaciones de contenido</li>
+                  <li>Revisión de contenido</li>
+                  <li>Ideas de mejora</li>
                   <li>Organización de procesos</li>
                 </ul>
               </div>
@@ -157,25 +176,117 @@
         </div>
       </div>
     </section>
+
+    <!-- PORTFOLIO DESTACADO -->
+    <section class="section portfolio-preview">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-4">
+          <div>
+            <p class="section__eyebrow mb-2">Proyectos</p>
+            <h2 class="section__title mb-0">Marcas con las que trabajé</h2>
+          </div>
+          <a class="link-arrow" href="pages/portfolio.html">Ver portfolio</a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 portfolio-card">
+              <img
+                src="img/tesi-shoes.jpg"
+                class="card-img-top"
+                alt="Proyecto de contenido para Tesi Shoes"
+              />
+              <div class="card-body">
+                <h3 class="h5">Tesi Shoes</h3>
+                <p class="mb-0">
+                  Contenido para una marca de calzado con foco en identidad visual, interacción y
+                  presencia en Instagram.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 portfolio-card">
+              <img
+                src="img/ombu-propiedades.jpg"
+                class="card-img-top"
+                alt="Proyecto de comunicación digital para Ombú Propiedades"
+              />
+              <div class="card-body">
+                <h3 class="h5">Ombú Propiedades</h3>
+                <p class="mb-0">
+                  Gestión de contenido orientada a mostrar servicios, generar cercanía y reforzar la
+                  comunicación de marca.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 portfolio-card">
+              <img
+                src="img/perfil-sca.jpg"
+                class="card-img-top"
+                alt="Identidad visual y proyecto personal de SCA.Community"
+              />
+              <div class="card-body">
+                <h3 class="h5">SCA.Community</h3>
+                <p class="mb-0">
+                  Desarrollo de marca personal, propuesta visual y comunicación estratégica aplicada
+                  a mi propio proyecto profesional.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-box text-center">
+          <p class="section__eyebrow mb-2">Trabajemos juntas</p>
+          <h2 class="section__title">Potenciá la presencia digital de tu marca</h2>
+          <p class="mb-4">
+            Si buscás una comunicación más clara, organizada y alineada a tu identidad, te invito a
+            conocer mis servicios y escribirme para trabajar juntas.
+          </p>
+          <a class="btn btn-primary btn-lg" href="pages/contacto.html">Ir a contacto</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-4 align-items-start">
         <div class="col-12 col-lg-6">
           <h3 class="h5 mb-2">SCA.Community</h3>
           <p class="mb-0">
-            Gestión y creación de contenido para marcas que buscan crecer
-            y comunicar de forma estratégica en redes sociales.
+            Gestión y creación de contenido para marcas que buscan crecer y comunicar de manera
+            estratégica en redes sociales.
           </p>
         </div>
 
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-3">
+          <h4 class="h6 mb-2">Secciones</h4>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/sobre-mi.html">Sobre mí</a></li>
+            <li><a href="pages/servicios.html">Servicios</a></li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-3">
           <h4 class="h6 mb-2">Contacto</h4>
           <ul class="list-unstyled mb-0">
-            <li><span class="fw-semibold">Email:</span> socruzastrada@gmail.com</li>
-            <li><span class="fw-semibold">Instagram:</span> @sca.community</li>
-            <li><span class="fw-semibold">Ubicación:</span> Buenos Aires, Argentina</li>
+            <li>Email: socruzastrada@gmail.com</li>
+            <li>Instagram: @sca.community</li>
+            <li>Ubicación: Buenos Aires, Argentina</li>
           </ul>
         </div>
       </div>
@@ -185,7 +296,7 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS (CDN) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
