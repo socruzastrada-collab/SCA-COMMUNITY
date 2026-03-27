@@ -2,38 +2,47 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <meta
     name="description"
-    content="Contacto de SCA.Community. Podés escribir para consultas sobre gestión de redes sociales, estrategia digital o creación de contenido."
+    content="Contacto de SCA.Community. Escribime para consultas sobre gestión de redes sociales, estrategia digital o creación de contenido."
   />
+  <meta
+    name="keywords"
+    content="contacto community manager, redes sociales, estrategia digital, contenido instagram"
+  />
+  <meta name="author" content="Sofía Cruz Astrada" />
+
+  <meta property="og:title" content="SCA.Community | Contacto" />
+  <meta
+    property="og:description"
+    content="Escribime para trabajar en la estrategia digital y contenido de tu marca."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:image" content="../img/perfil-sca.jpg" />
 
   <title>SCA.Community | Contacto</title>
 
-  <!-- Bootstrap CSS -->
+  <link rel="icon" href="../img/favicon.png" type="image/png" />
+
+  <!-- Bootstrap -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
 
-  <!-- CSS compilado desde SCSS -->
-  <link rel="stylesheet" href="../css/styles.css" />
-
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css" />
 </head>
 
 <body>
 
 <header class="site-header">
-
-  <nav class="navbar navbar-expand-lg">
-
+  <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
     <div class="container">
-
-      <a class="navbar-brand fw-semibold" href="../index.html">
-        SCA.Community
-      </a>
+      <a class="navbar-brand fw-semibold" href="../index.html">SCA.Community</a>
 
       <button
         class="navbar-toggler"
@@ -42,56 +51,30 @@
         data-bs-target="#mainNav"
         aria-controls="mainNav"
         aria-expanded="false"
-        aria-label="Abrir menú"
+        aria-label="Abrir menú de navegación"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="mainNav">
-
         <ul class="navbar-nav ms-auto gap-lg-2">
-
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Inicio</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="servicios.html">Servicios</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" href="contacto.html">Contacto</a>
-          </li>
-
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a></li>
         </ul>
-
       </div>
     </div>
-
   </nav>
-
 </header>
-
 
 <main>
 
 <!-- INTRO -->
-
 <section class="section">
-
   <div class="container">
-
-    <p class="section__eyebrow mb-2">
-      Contacto
-    </p>
+    <p class="section__eyebrow mb-2">Contacto</p>
 
     <h1 class="section__title">
       Hablemos sobre tu proyecto
@@ -102,38 +85,24 @@
       podés escribirme completando el formulario o
       a través de mis redes.
     </p>
-
   </div>
-
 </section>
 
-
-
-<!-- FORMULARIO + INFO -->
-
+<!-- FORM + INFO -->
 <section class="section">
-
   <div class="container">
 
-    <div class="row g-4 contact-grid">
-
+    <div class="row g-4">
 
       <!-- FORMULARIO -->
-
       <div class="col-12 col-lg-7">
 
         <form class="card service-card p-3 p-md-4" action="#" method="post">
 
-          <h2 class="h5 mb-4">
-            Enviame un mensaje
-          </h2>
+          <h2 class="h5 mb-4">Enviame un mensaje</h2>
 
           <div class="mb-3">
-
-            <label for="nombre" class="form-label">
-              Nombre
-            </label>
-
+            <label for="nombre" class="form-label">Nombre</label>
             <input
               type="text"
               id="nombre"
@@ -142,16 +111,10 @@
               placeholder="Tu nombre"
               required
             />
-
           </div>
 
-
           <div class="mb-3">
-
-            <label for="email" class="form-label">
-              Email
-            </label>
-
+            <label for="email" class="form-label">Email</label>
             <input
               type="email"
               id="email"
@@ -160,16 +123,10 @@
               placeholder="tucorreo@mail.com"
               required
             />
-
           </div>
 
-
           <div class="mb-3">
-
-            <label for="mensaje" class="form-label">
-              Mensaje
-            </label>
-
+            <label for="mensaje" class="form-label">Mensaje</label>
             <textarea
               id="mensaje"
               name="mensaje"
@@ -178,177 +135,135 @@
               placeholder="Contame sobre tu marca y qué necesitás 🙂"
               required
             ></textarea>
-
           </div>
 
-
-          <button
-            type="submit"
-            class="btn btn-primary btn-lg w-100"
-          >
+          <button type="submit" class="btn btn-primary btn-lg w-100">
             Enviar mensaje
           </button>
 
-
           <p class="small text-muted mt-3 mb-0">
-
-            *Este formulario es para práctica de la entrega.
-            Más adelante puede integrarse con Formspree,
-            Netlify Forms o Google Forms.
-
+            *Formulario de práctica. Puede integrarse con Formspree o Netlify Forms.
           </p>
 
         </form>
 
+        <!-- RESERVA -->
+        <div class="card service-card p-3 p-md-4 mt-4">
+          <h2 class="h5 mb-3">¿Preferís agendar una reunión?</h2>
+
+          <p class="mb-3">
+            Podés reservar directamente una videollamada conmigo para conversar sobre tu proyecto.
+          </p>
+
+          <a
+            href="https://calendar.app.google/3BghYqWCG2MqQ5teA"
+            target="_blank"
+            class="btn btn-outline-primary btn-lg w-100"
+          >
+            Reservar reunión
+          </a>
+        </div>
+
       </div>
-      <!-- RESERVAR REUNIÓN -->
 
-<div class="card service-card p-3 p-md-4 mt-4">
-
-  <h2 class="h5 mb-3">
-    ¿Preferís agendar una reunión?
-  </h2>
-
-  <p class="mb-3">
-    También podés reservar directamente una videollamada conmigo
-    para conversar sobre tu proyecto.
-  </p>
-
-  <a
-    href="https://calendar.app.google/3BghYqWCG2MqQ5teA"
-    target="_blank"
-    class="btn btn-outline-primary btn-lg w-100"
-  >
-    Reservar reunión en Google Calendar
-  </a>
-
-</div>
-
-      <!-- DATOS DE CONTACTO -->
-
+      <!-- INFO -->
       <div class="col-12 col-lg-5">
 
         <aside class="card h-100 p-3 p-md-4">
 
-          <h2 class="h5 mb-3">
-            También podés escribirme por:
-          </h2>
+          <h2 class="h5 mb-3">También podés escribirme por:</h2>
 
           <ul class="list-unstyled mb-4">
-
             <li class="mb-2">
-              <span class="fw-semibold">Email:</span>
-              sca.community@gmail.com
+              Email:
+              <a href="mailto:sca.community@gmail.com">
+                sca.community@gmail.com
+              </a>
             </li>
 
             <li class="mb-2">
-              <span class="fw-semibold">Instagram:</span>
-              @sca.community
+              Instagram:
+              <a href="https://www.instagram.com/sca.community/" target="_blank">
+                @sca.community
+              </a>
             </li>
 
             <li class="mb-2">
-              <span class="fw-semibold">Ubicación:</span>
-              Buenos Aires, Argentina
+              Ubicación: Buenos Aires, Argentina
             </li>
-
           </ul>
 
-
           <div class="d-grid gap-2">
-
-            <a
-              class="btn btn-outline-primary"
-              href="mailto:sca.community@gmail.com"
-            >
+            <a class="btn btn-outline-primary" href="mailto:sca.community@gmail.com">
               Enviar email
             </a>
-
 
             <a
               class="btn btn-outline-primary"
               href="https://www.instagram.com/sca.community/"
               target="_blank"
-              rel="noopener"
             >
               Ver Instagram
             </a>
-
           </div>
 
         </aside>
 
       </div>
 
-
     </div>
 
   </div>
-
 </section>
 
 </main>
 
-
-
 <footer class="site-footer">
-
   <div class="container">
 
-    <div class="row g-4">
+    <div class="row g-4 align-items-start">
 
       <div class="col-12 col-lg-6">
-
-        <h3 class="h5 mb-2">
-          SCA.Community
-        </h3>
-
+        <h3 class="h5 mb-2">SCA.Community</h3>
         <p class="mb-0">
           Gestión y creación de contenido para marcas que buscan crecer
           y comunicar de forma estratégica en redes sociales.
         </p>
-
       </div>
 
-
-      <div class="col-12 col-lg-6">
-
-        <h4 class="h6 mb-2">
-          Contacto
-        </h4>
-
+      <div class="col-12 col-lg-3">
+        <h4 class="h6 mb-2">Secciones</h4>
         <ul class="list-unstyled mb-0">
-
-          <li>
-            <span class="fw-semibold">Email:</span>
-            sca.community@gmail.com
-          </li>
-
-          <li>
-            <span class="fw-semibold">Instagram:</span>
-            @sca.community
-          </li>
-
-          <li>
-            <span class="fw-semibold">Ubicación:</span>
-            Buenos Aires, Argentina
-          </li>
-
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
+      </div>
 
+      <div class="col-12 col-lg-3">
+        <h4 class="h6 mb-2">Contacto</h4>
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="mailto:sca.community@gmail.com">sca.community@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sca.community/" target="_blank">
+              @sca.community
+            </a>
+          </li>
+          <li>Buenos Aires, Argentina</li>
+        </ul>
       </div>
 
     </div>
 
     <hr class="my-4" />
-
-    <p class="mb-0 small">
-      © 2026 Sofía Cruz Astrada – Community Manager
-    </p>
+    <p class="mb-0 small">© 2026 Sofía Cruz Astrada – Community Manager</p>
 
   </div>
-
 </footer>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
