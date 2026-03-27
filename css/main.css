@@ -1,19 +1,4 @@
 @charset "UTF-8";
-/* ==============================
-   VARIABLES
-============================== */
-/* ==============================
-   MIXINS
-============================== */
-/* ==============================
-   EXTENDS
-============================== */
-.about-card, .about-highlight, .portfolio-card, .service-card {
-  border: 1px solid #e8dff0;
-  border-radius: 20px;
-  background-color: #ffffff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 /* ==============================
    RESET
@@ -45,10 +30,11 @@ main {
 
 a {
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 /* ==============================
-   HEADER / NAVBAR
+   HEADER
 ============================== */
 .site-header {
   background: #ffffff;
@@ -62,21 +48,21 @@ a {
   color: hsl(290, 65%, 29%);
   font-weight: 700;
 }
-.navbar .navbar-brand:hover {
-  color: hsl(290, 65%, 29%);
-}
+
 .navbar .nav-link {
   color: #1f1f1f;
-  transition: color 0.3s ease;
 }
+
 .navbar .nav-link:hover {
   color: hsl(290, 65%, 29%);
 }
+
 .navbar .nav-link.active {
   color: hsl(290, 65%, 29%);
   font-weight: 600;
 }
-.navbar .navbar-toggler {
+
+.navbar-toggler {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -87,6 +73,7 @@ a {
   padding: 5rem 0;
   background: linear-gradient(180deg, #faf7fc 0%, #f3e9fa 100%);
 }
+
 .hero__eyebrow {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -95,18 +82,22 @@ a {
   font-weight: 700;
   margin-bottom: 0.75rem;
 }
+
 .hero__title {
   color: hsl(290, 65%, 29%);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
+
 .hero__text {
   margin-bottom: 1rem;
 }
+
 .hero__actions {
   margin-top: 1.5rem;
 }
+
 .hero__card {
   background: #ffffff;
   border: 1px solid #e8dff0;
@@ -114,9 +105,11 @@ a {
   padding: 1.5rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
+
 .hero__list {
   padding-left: 1.2rem;
 }
+
 .hero__list li {
   margin-bottom: 0.5rem;
 }
@@ -144,10 +137,23 @@ a {
 .link-arrow {
   color: hsl(290, 65%, 29%);
   font-weight: 600;
-  transition: all 0.3s ease;
 }
+
 .link-arrow:hover {
   color: #1f1f1f;
+}
+
+/* ==============================
+   CARDS (base reutilizable)
+============================== */
+.about-card,
+.about-highlight,
+.portfolio-card,
+.service-card {
+  border: 1px solid #e8dff0;
+  border-radius: 20px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ==============================
@@ -157,21 +163,17 @@ a {
   background-color: #faf7fc;
 }
 
-.service-card {
-  box-shadow: none;
-}
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
+
 .service-card .card-body {
   padding: 1.5rem;
 }
+
 .service-card ul {
   padding-left: 1.2rem;
-}
-.service-card ul li {
-  margin-bottom: 0.35rem;
 }
 
 /* ==============================
@@ -184,47 +186,25 @@ a {
 .portfolio-card {
   overflow: hidden;
 }
+
 .portfolio-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
+
 .portfolio-card img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 220px;
   width: 100%;
+  transition: transform 0.3s ease;
 }
+
+.portfolio-card:hover img {
+  transform: scale(1.03);
+}
+
 .portfolio-card .card-body {
   padding: 1.5rem;
-}
-
-.about-hero {
-  background-color: #faf7fc;
-}
-
-.about-highlight {
-  padding: 1.5rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-.about-highlight ul {
-  padding-left: 1.2rem;
-}
-.about-highlight ul li {
-  margin-bottom: 0.5rem;
-}
-
-.about-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-.about-card .card-body {
-  padding: 1.5rem;
-}
-.about-card ul {
-  padding-left: 1.2rem;
-}
-.about-card ul li {
-  margin-bottom: 0.35rem;
 }
 
 /* ==============================
@@ -249,16 +229,15 @@ a {
   color: #ffffff;
   padding: 3rem 0;
 }
+
 .site-footer a {
   color: #ffffff;
-  transition: opacity 0.3s ease;
 }
+
 .site-footer a:hover {
   opacity: 0.8;
 }
-.site-footer ul {
-  padding-left: 0;
-}
+
 .site-footer hr {
   border-color: rgba(255, 255, 255, 0.2);
 }
@@ -270,102 +249,69 @@ a {
   padding: 0.75rem 1.5rem;
   border-radius: 12px;
   font-weight: 600;
-  transition: all 0.3s ease;
   background: hsl(290, 65%, 29%);
   border: none;
+  transition: all 0.3s ease;
 }
+
 .btn-primary:hover {
   transform: translateY(-2px);
-  background: hsl(290, 65%, 29%);
 }
 
 .btn-outline-primary {
   padding: 0.75rem 1.5rem;
   border-radius: 12px;
   font-weight: 600;
-  transition: all 0.3s ease;
   border: 1px solid hsl(290, 65%, 29%);
   color: hsl(290, 65%, 29%);
   background: transparent;
+  transition: all 0.3s ease;
 }
+
 .btn-outline-primary:hover {
   transform: translateY(-2px);
   background-color: hsl(290, 65%, 29%);
   color: #ffffff;
-  border-color: hsl(290, 65%, 29%);
 }
 
 /* ==============================
-   EACH (CLASES DINÁMICAS)
+   ACCESSIBILITY (PRO)
 ============================== */
-.btn-instagram {
-  background-color: #e1306c;
-  color: #ffffff;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  display: inline-block;
-  transition: 0.3s ease;
-}
-.btn-instagram:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.btn-linkedin {
-  background-color: #0a66c2;
-  color: #ffffff;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  display: inline-block;
-  transition: 0.3s ease;
-}
-.btn-linkedin:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.btn-whatsapp {
-  background-color: #25d366;
-  color: #ffffff;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  display: inline-block;
-  transition: 0.3s ease;
-}
-.btn-whatsapp:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+a:focus,
+button:focus {
+  outline: 2px solid hsl(290, 65%, 29%);
+  outline-offset: 2px;
 }
 
 /* ==============================
    RESPONSIVE
 ============================== */
-@media (max-width: 992px) {
-  .hero {
-    padding: 4rem 0;
-  }
-}
 @media (max-width: 768px) {
   .hero {
     padding: 3rem 0;
   }
+
   .hero__title {
     font-size: 1.9rem;
   }
+
   .section {
     padding: 3rem 0;
   }
+
   .cta-box {
     padding: 2rem;
   }
 }
+
 @media (max-width: 576px) {
   .hero__title {
     font-size: 1.7rem;
   }
+
   .btn-primary,
   .btn-outline-primary {
     width: 100%;
     text-align: center;
   }
-}/*# sourceMappingURL=main.css.map */
+}
