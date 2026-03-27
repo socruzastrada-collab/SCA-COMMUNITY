@@ -1,0 +1,28 @@
+.site-footer {
+  background: $color-primary;
+  color: $color-white;
+  padding: 3rem 0;
+
+  h3,
+  h4 {
+    color: $color-white;
+  }
+
+  a {
+    color: $color-white;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  hr {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
